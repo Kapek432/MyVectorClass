@@ -340,7 +340,7 @@ MyVector<T>& MyVector<T>::operator/=(const T& other)
     return *this;
 }
 
-//Operator <<
+
 
 
 
