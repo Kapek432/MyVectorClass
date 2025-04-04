@@ -3,7 +3,9 @@
 #include <limits>
 
 int main() {
-    MyVector<int> vec1;
+
+    typedef float var;
+    MyVector<var> vec1;
 
     vec1.pushBack(10);
     vec1.pushBack(20);
@@ -47,37 +49,37 @@ int main() {
     vec1.sort();
     std::cout << "vec1 after sort: " << vec1 << std::endl;
 
-    MyVector<int> vec2 = vec1;
+    MyVector<var> vec2 = vec1;
     std::cout << "vec2 after copy assignment: " << vec2 << std::endl;
 
     std::cout << "vec1 and vec2 are equal: " << (vec1 == vec2 ? "True" : "False") << std::endl;
 
-    MyVector<int> vec3;
+    MyVector<var> vec3;
     vec3.pushBack(500);
     vec3.pushBack(600);
     vec3.pushBack(700);
-    MyVector<int> vec4 = vec1 + vec3;
+    MyVector<var> vec4 = vec1 + vec3;
     std::cout << "vec4 (vec1 + vec3): " << vec4 << std::endl;
     vec1 += vec3;
     std::cout << "vec1 after vec1 += vec3: " << vec1 << std::endl;
 
-    MyVector<int> vec5 = vec1 - vec3;
+    MyVector<var> vec5 = vec1 - vec3;
     std::cout << "vec5 (vec1 - vec3): " << vec5 << std::endl;
     vec1 -= vec3;
     std::cout << "vec1 after vec1 -= vec3: " << vec1 << std::endl;
 
-    MyVector<int> vec6 = vec1 * vec3;
+    MyVector<var> vec6 = vec1 * vec3;
     std::cout << "vec6 (vec1 * vec3): " << vec6 << std::endl;
     vec1 *= vec3;
     std::cout << "vec1 after vec1 *= vec3: " << vec1 << std::endl;
 
-    MyVector<int> vec7 = vec1 / vec3;
+    MyVector<var> vec7 = vec1 / vec3;
     std::cout << "vec7 (vec1 / vec3): " << vec7 << std::endl;
     vec1 /= vec3;
     std::cout << "vec1 after vec1 /= vec3: " << vec1 << std::endl;
 
     std::cout << "Enter 3 numbers for vec8: ";
-    MyVector<int> vec8(3);
+    MyVector<var> vec8(3);
     vec8.resize(3);
     std::cin >> vec8;
     std::cout << "vec8 after input: " << vec8 << std::endl;
